@@ -3,7 +3,71 @@
 @import 'fonts';
 @import 'global';
 
+.header {
+	padding: 40px 0;
 
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+}
+
+.menu {
+	&__list {
+		display: flex;
+	}
+
+	&__item:not(:last-child) {
+		padding-right: 35px;
+	}
+
+	&__link {
+		color: $title;
+		text-transform: uppercase;
+		padding-bottom: 1px;
+		transition: color 0.3s, border-color 0.3s ;
+		border-bottom: 1px solid transparent;
+		@extend %quicksand-400;
+		&:hover {
+			color: $accent;
+			border-color: $accent;
+			@extend %quicksand-500;
+		}
+	}
+
+	&__link--active {
+		color: $accent;
+		border-color: $accent;
+		@extend %quicksand-500;
+	}
+}
+
+.user-nav {
+	display: flex;
+
+	&__link {
+		position: relative;
+	}
+
+	&__link:not(:first-child) {
+		padding-left: 25px;
+	}
+
+	&__num {
+		position: absolute;
+		width: 20px;
+		height: 20px;
+		border-radius: 50%;
+		background-color: $accent;
+		top: -9px;
+		right: -14px;
+		font-size: 12px;
+		color: #fff;
+		line-height: 1.7;
+		text-align: center;
+	}
+}
 
 
 
