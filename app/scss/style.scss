@@ -5,15 +5,15 @@
 
 .header {
 	padding: 40px 0;
+}
 
+.menu {
 	&__inner {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 	}
-}
 
-.menu {
 	&__list {
 		display: flex;
 	}
@@ -43,18 +43,32 @@
 	}
 }
 
-.user-nav {
+.menu__nav {
 	display: flex;
 
-	&__link {
-		position: relative;
-	}
-
-	&__link:not(:first-child) {
+	&-item:not(:first-child) {
 		padding-left: 25px;
 	}
 
-	&__num {
+	&-item {
+		position: relative;
+	}
+
+	&-link svg {
+		width: 20px;
+		height: 20px;
+	}
+
+	&-link path {
+		fill: #29282d;
+		transition: fill 0.3s;
+	}
+
+	&-link:hover path {
+		fill: $accent;
+	} 
+
+	&-num {
 		position: absolute;
 		width: 20px;
 		height: 20px;
